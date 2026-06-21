@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student marks counter</title>
+</head>
+<body>
+   <h1 id="marks">50</h1> 
+   <button id="addBtn">Add bouns marks</button>
+     <button id="deductBtn">Deduct marks</button>
+     <script>
+        let marks=50;
+
+
+        let marksHeading = document.querySelector("#marks");
+        let addBtn = document.querySelector("#addBtn");
+        let deductBtn= document.querySelector("#deductBtn");
+
+        function addMarks(){
+            marks +=5;
+            marksHeading.innerHTML= marks;
+
+        }
+        function deductMarks(){
+            marks -=5;
+            marksHeading.innerHTML= marks;
+
+        }
+        addBtn.addEventListener("click",addMarks);
+        deductBtn.addEventListener("click",deductMarks);
+
+     </script>
+     
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age counter</title>
+
+</head>
+<body>
+
+    <h1 id="age">18</h1>
+    <button id="birthdayBtn">Birthday</button>
+    <button id="backBtn">Go back one year</button>
+    <script>
+        let age=18
+        let ageHeading=document.querySelector("#age")
+        let birthdayBtn=document.querySelector("#birthdayBtn")
+        let backBtn=document.querySelector("#backBtn")
+        function incrementAge(){
+            age++;
+            ageHeading.innerHTML= age;
+        }
+        function decrementAge(){
+            age--;
+            ageHeading.innerHTML=age;
+        }
+        birthdayBtn.addEventListener("click",incrementAge);
+        backBtn.addEventListener("click",decrementAge);
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id ="bulbStatus">Bulb is off</h1>
+    <button id="onBtn">turnOn</button>
+    <button  id="offBtn">turnOff</button>
+    <script>
+        let bulbStatus=document.querySelector("#bulbStatus")
+        let onBtn=document.querySelector("#onBtn")
+        let offBtn=document.querySelector("#offBtn")
+        function turnOn(){
+            bulbStatus.innerHTML="bulb is On";
+        }
+        function turnOff(){
+            bulbStatus.innerHTML="bulb is Off"
+        }
+        onBtn.addEventListener("click",turnOn)
+        offBtn.addEventListener("click",turnOff)
+    </script>
+</body>
+</html>
